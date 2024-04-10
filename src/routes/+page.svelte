@@ -27,8 +27,8 @@
 
   const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const defaultPlace = {
-    name: 'Rinconada Library',
-    address: '1213 Newell Rd, Palo Alto, CA 94303',
+    name: import.meta.env.VITE_DEFAULT_PLACE_NAME,
+    address: import.meta.env.VITE_DEFAULT_PLACE_ADDRESS,
   };
   let location: google.maps.LatLng | undefined;
   const zoom = 19;
@@ -116,13 +116,13 @@
           href="https://github.com/googlemaps-samples/js-solar-potential"
           target="_blank"
         >
-          View code on GitHub
-          <img slot="icon" src="github-mark.svg" alt="GitHub" width="16" height="16" />
+          Visit 28East.co.za
+          <img slot="icon" src="logo.svg" alt="28East" width="16" height="16" />
         </md-text-button>
       </div>
 
       <span class="pb-4 text-center outline-text label-small">
-        This is not an officially supported Google product.
+        This product is for demonstration purposes only.
       </span>
     </div>
   </aside>
